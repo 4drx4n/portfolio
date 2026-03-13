@@ -21,15 +21,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build Astro
         run: npm run build
 
-      - name: Upload build
+      - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -43,6 +42,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
