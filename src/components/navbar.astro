@@ -1,0 +1,36 @@
+<nav class="fixed top-0 left-0 w-full bg-black px-8 z-50">
+    
+    <div class="flex items-center justify-between">
+        
+        <div class="flex items-center gap-8">
+            <img src={`${import.meta.env.BASE_URL}logo.png`} class="w-16" alt="Logo Adrián Aguilar Abadía" />
+        </div>
+        
+        <div class="hidden md:flex gap-6 text-gray-300 text-sm md:text-base lg:text-xl">
+            
+            <a href="#" class="hover:text-blue-600 transition">Inicio</a>
+            <a href="#aboutMe" class="hover:text-blue-600 transition">Sobre mí</a>
+            <a href="#tech" class="hover:text-blue-600 transition">Tecnologías</a>
+            <a href="#projects" class="hover:text-blue-600 transition">Proyectos</a>
+            <a href="#contact" class="hover:text-blue-600 transition">Contacto</a>
+            
+        </div>
+        
+        
+        <button id="navBtn" class="md:hidden text-gray-300 text-2xl">
+            ☰
+        </button>
+        
+    </div>
+        
+    <div id="mobileMenu" class="hidden flex-col bg-black text-gray-300 text-center md:hidden border-t border-gray-700">
+        
+        <a href="#" class="py-3 hover:text-blue-600 transition">Inicio</a>
+        <a href="#aboutMe" class="py-3 hover:text-blue-600 transition">Sobre mí</a>
+        <a href="#tech" class="py-3 hover:text-blue-600 transition">Tecnologías</a>
+        <a href="#projects" class="py-3 hover:text-blue-600 transition">Proyectos</a>
+        <a href="#contact" class="py-3 hover:text-blue-600 transition">Contacto</a>
+        
+    </div>
+        
+</nav>
