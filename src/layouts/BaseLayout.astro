@@ -16,7 +16,7 @@ const { title = "Portfolio Adrián Aguilar" } = Astro.props;
         <script src="/src/scripts/global.js"></script>
     </head>
 
-    <body class={`bg-[url(${import.meta.env.BASE_URL}wl3.png)] bg-cover bg-center md:bg-fixed scroll-smooth`}>
+    <body style={`background-image: url('${import.meta.env.BASE_URL}wl3.png');`} class="bg-cover bg-center md:bg-fixed scroll-smooth">
         <Navbar />
         
         <main class="w-full max-w-5xl mx-auto p-6">
