@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const allPost = Object.values(
+    import.meta.glob("../posts/*.md", { eager: true }),
+);
+
+const tags = [
+    ...new Set(allPost.map((post: any) => post.frontmatter.tags).flat()),
+];
+
+const pageTitle = "Tags";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h1 class="mt-20 md:text-3xl lg:text-4xl text-gray-300">Tags</h1>
+
+    <div>
+    {
+        tags.map(tag => (
+            <p class="md:text-2xl lg:text-3xl text-blue-600">
+                <a href={`${import.meta.env.BASE_URL}tags/${tag}`}>
+                    {tag}
+                </a>
+            </p>
+        ))
+    }
+    </div>
+</BaseLayout>

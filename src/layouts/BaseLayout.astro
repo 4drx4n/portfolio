@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/footer.astro";
+import "../scripts/global.js";
 
 const { title = "Portfolio Adrián Aguilar" } = Astro.props;
 ---
@@ -13,13 +14,12 @@ const { title = "Portfolio Adrián Aguilar" } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{title}</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <script src="/src/scripts/global.js"></script>
     </head>
 
-    <body style={`background-image: url('${import.meta.env.BASE_URL}wl3.png');`} class="bg-cover bg-center md:bg-fixed scroll-smooth">
+    <body style={`background-image: url('${import.meta.env.BASE_URL}wl3.png');`} class="bg-cover bg-center md:bg-fixed scroll-smooth min-h-screen flex flex-col">
         <Navbar />
         
-        <main class="w-full max-w-5xl mx-auto p-6">
+        <main class="grow w-full max-w-5xl mx-auto p-6">
             <slot />
         </main>
         
