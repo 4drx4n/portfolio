@@ -2,8 +2,6 @@
 import "../styles/global.css";
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/footer.astro";
-import "../scripts/global.js";
-
 const { title = "Portfolio Adrián Aguilar" } = Astro.props;
 ---
 
@@ -24,5 +22,9 @@ const { title = "Portfolio Adrián Aguilar" } = Astro.props;
         </main>
         
         <Footer />
+
+        <script>
+            import "../scripts/global.js";
+        </script>
     </body>
 </html>
