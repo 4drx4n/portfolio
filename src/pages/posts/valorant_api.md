@@ -7,4 +7,15 @@ tags: ["javascript", "html", "tailwind"]
 github: "https://4drx4n.github.io/Valorant/"
 ---
 
-Proyecto de práctica para aprender JavaScript.
+## Tecnologías utilizadas
+
+- JavaScript
+- HTML
+- Tailwind
+
+## Características
+
+- Operaciones básicas
+- Interfaz moderna
+- Control mediante clics
+- Interiorizar Tailwind
